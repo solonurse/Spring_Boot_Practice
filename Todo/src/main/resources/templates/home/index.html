@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+<head>
+    <title>ホームページ</title>
+</head>
+<body>
+  <section layout:fragment="content" class="text-center">
+    <h1 class="h1">タスク管理</h1>
+    <a href="../task/index" th:href="@{/tasks}">タスク一覧</a>
+    <a href="../task/index" th:href="@{/tasks/createForm}">タスク作成</a>
+  </section>
+</body>
+</html>

@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
+<section layout:fragment="content">
+    <p>タスク一覧</p>
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>概要</th>
+                <th>ステータス</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="task : ${taskList}">
+                <td>テーブル</td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
 </body>
 </html>

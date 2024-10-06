@@ -1,4 +1,4 @@
-package com.example.Todo.Todo;
+package com.example.Todo.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,10 +8,12 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Task {
+public class TaskEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String title;
-    private boolean comleted;
+    
+    private String description;
 }
